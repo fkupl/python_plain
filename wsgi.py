@@ -9,13 +9,13 @@ customers = [{'cid': '1-2345-67', 'value': 'Active'}, {'cid': '2-2345-67', 'valu
 
 @application.route('/', methods=['GET'])
 def default():
-    return jsonify({'message': 'It works!'})
+    return jsonify({'message': 'alive'})
 
-@application.route('/customers', methods=['GET'])
+@application.route('/customers/active', methods=['GET'])
 def getList():
     return jsonify({'customers': customers})
 
-@application.route('/customers/<string:cid>', methods=['GET'])
+@application.route('/customers/active/<string:cid>', methods=['GET'])
 def getOne(cid):
     customersResult = [customer for customer in customers if customer['cid'] == cid]
     return jsonify({'customer': customersResult[0]})
