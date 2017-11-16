@@ -17,8 +17,8 @@ def getList():
 
 @application.route('/customers/<string:cid>', methods=['GET'])
 def getOne(cid):
-    customers = [customer for customer in customers if customer['cid'] == cid]
-    return jsonify({'customer': customers[0]})
+    customersResult = [customer for customer in customers if customer['cid'] == cid]
+    return jsonify({'customer': customersResult[0]})
 
 if __name__ == '__main__':
     application.run()
