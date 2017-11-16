@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 
 application  = Flask(__name__)
 
-languages = [{'cid': '1-2345-67', 'value': 'Active'}, {'cid': '2-2345-67', 'value': 'Active'},
+customers = [{'cid': '1-2345-67', 'value': 'Active'}, {'cid': '2-2345-67', 'value': 'Active'},
              {'cid': '3-2345-67', 'value': 'Active'}, {'cid': '4-2345-67', 'value': 'Active'},
              {'cid': '5-2345-67', 'value': 'Active'}, {'cid': '6-2345-67', 'value': 'Active'},
              {'cid': '7-2345-67', 'value': 'Active'}]
@@ -13,7 +13,7 @@ def default():
 
 @application.route('/customers', methods=['GET'])
 def getList():
-    return jsonify({'customers': languages})
+    return jsonify({'customers': customers})
 
 @application.route('/customers/<string:cid>', methods=['GET'])
 def getOne(cid):
