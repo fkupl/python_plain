@@ -5,7 +5,7 @@ application  = Flask(__name__)
 languages = [{'cid': '1-2345-67', 'value': 'Active'}, {'cid': '2-2345-67', 'value': 'Active'},
              {'cid': '3-2345-67', 'value': 'Active'}, {'cid': '4-2345-67', 'value': 'Active'},
              {'cid': '5-2345-67', 'value': 'Active'}, {'cid': '6-2345-67', 'value': 'Active'},
-             {'cid': '7-2345-67', 'value': 'Active']
+             {'cid': '7-2345-67', 'value': 'Active'}]
 
 @app.route('/', methods=['GET'])
 def default():
