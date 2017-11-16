@@ -16,7 +16,7 @@ def getList():
     return jsonify({'customers': languages})
 
 @application.route('/customers/<string:cid>', methods=['GET'])
-def getOne(isoParam):
+def getOne(cid):
     customers = [customer for customer in customers if customer['cid'] == cid]
     return jsonify({'customer': customers[0]})
 
